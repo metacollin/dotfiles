@@ -32,23 +32,14 @@ if ! fgrep -q '/usr/local/bin/bash' /etc/shells; then
 fi;
 
 # Install `wget` with IRI support.
-brew install wget --with-iri
-
-# Install RingoJS and Narwhal.
-# Note that the order in which these are installed is important;
-# see http://git.io/brew-narwhal-ringo.
-brew install ringojs
-brew install narwhal
+brew install wget --with-iri --with-pcre
 
 # Install more recent versions of some macOS tools.
-brew install vim --override-system-vi
 brew install homebrew/dupes/grep
 brew install homebrew/dupes/openssh
 brew install homebrew/dupes/screen
-brew install homebrew/php/php56 --with-gmp
 
-# Install font tools.
-brew tap bramstein/webfonttools
+# Install font tools
 brew install sfnt2woff
 brew install sfnt2woff-zopfli
 brew install woff2
@@ -95,11 +86,57 @@ brew install rename
 brew install rhino
 brew install speedtest_cli
 brew install ssh-copy-id
+
 brew install testssl
 brew install tree
 brew install vbindiff
 brew install webkit2png
 brew install zopfli
+brew install pngquant
+brew install pngout
+brew install tesseract
+brew install zpaq
+brew install wine
+brew install winetricks
+brew install unrar
+brew install nodebrew
+
+# Install devtools
+brew install autoconf
+brew install autoenv
+brew install autogen
+brew install autojump
+brew install automake
+brew install bison
+brew install boost --universal --c++11
+brew install clang-format
+brew install cmake
+brew install colordiff
+brew install crystal-lang
+brew install doxygen
+brew install gcc
+brew install gawk
+brew install gettext
+brew install hidapi
+brew install libffi
+brew install libmpc
+brew install libpng
+brew install libtool
+brew install libusb
+brew install libusb-compat
+brew install llvm --with-all-targets --with-toolchain --universal
+brew install makedepend
+brew install mruby
+brew install nano
+brew install ncurses
+brew install pcre
+brew install pkg-config
+brew install qt5
+brew install readline
+brew install ruby
+
 
 # Remove outdated versions from the cellar.
 brew cleanup
+brew prune
+
